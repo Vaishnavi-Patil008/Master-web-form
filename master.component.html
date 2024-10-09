@@ -1,0 +1,89 @@
+<div class="Container">
+
+    <h2 class="text-center">Product Master</h2>
+    <div class="row">
+        <div class="form-group col-2 mt-4">
+            <label for="">ID</label>
+            <input type="text" class="form-control"[(ngModel)]="obj.ID"><br>
+        </div>
+
+    <div class="form-group col-2 mt-4">
+        <label for="">Product Name:</label>
+        <input type="text" class="form-control"[(ngModel)]="obj.Name"><br>
+
+    </div>
+
+    <div class="form-group col-2 mt-4">
+        <label for="">Catagory</label>
+          
+        <select class="form-control" type="text" id="" aria-label="Default select example" name="Catagory"
+                    [(ngModel)]="obj.Catagory">
+                    <option *ngFor="let item of Catagory" [value]="item">{{item}}</option>
+                </select>
+    </div>
+
+    <div class="form-group col-2 mt-4">
+        <label for="">Sub Catagory</label>
+        <input type="text" class="form-control"[(ngModel)]="obj.Sub_Catagory"><br>
+
+    </div>
+    
+    <div class="form-group col-2 mt-4">
+        <label for="">Unit</label>
+        <input type="text" class="form-control"[(ngModel)]="obj.Unit"><br>
+
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-2">
+        <label for="">MRP</label>
+        <input type="text" class="form-control"[(ngModel)]="obj.Mrp"><br>
+
+    </div>
+
+    <div class="form-group col-2">
+        <label for="">Discount</label>
+        <input type="text" class="form-control"[(ngModel)]="obj.Discount"><br>
+
+    </div>
+    <div class="form-group col-2">
+        <label for="">Rate</label>
+        <input type="text" class="form-control"[(ngModel)]="obj.Rate"><br>
+
+    </div>
+    <div class="form-group col-2">
+        <label for="">SGST</label>
+        <input type="text" class="form-control"[(ngModel)]="obj.SGST"><br>
+    </div>
+    <div class="form-group col-2">
+        <label for="">CGST</label>
+        <input type="text" class="form-control"[(ngModel)]="obj.CGST"><br>
+
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-2">
+        <label for="">IGST</label>
+        <input type="text" class="form-control"[(ngModel)]="obj.IGST"><br>
+
+    </div>
+    <div class="form-group col-2">
+        <label for="">HSN Code</label>
+        <input type="text" class="form-control"[(ngModel)]="obj.HSN_Code"><br>
+    </div>
+
+<div class="form-group col-2">
+    <label for="">Operator Name</label>
+    <input type="text" class="form-control"[(ngModel)]="obj.OperatorName"><br>
+
+</div>
+<div class="form-group col-2">
+    <label for="">Trans Date</label>
+    <input type="date" class="form-control"[(ngModel)]="obj.Trans_Date"><br>
+
+</div>
+</div>
+<div class="col-3 me-4">
+    <button class="btn btn-primary mt-4  me-2" (click)="save();">Save</button>
+    <button class="btn btn-primary mt-4">Cancel</button>
+</div>
